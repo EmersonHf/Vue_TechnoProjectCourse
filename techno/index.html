@@ -44,7 +44,7 @@
 
     </section>
       <section class="produtos">
-        <div v-for="item in produtos" @click="fetchProduto(item.id)" class="produto" :key="item.id">
+        <div v-for="item in produtos" @click="abrirModal(item.id)" class="produto" :key="item.id">
           <img :src="item.img" :alt="item.nome" class="produto_img" />
           <div>
             <span class="produto_preco">{{item.preco | numeroPreco}}</span>
