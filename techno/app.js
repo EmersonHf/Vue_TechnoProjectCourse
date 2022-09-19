@@ -22,7 +22,10 @@ const vm = new Vue({
         .then(r => r.json())
         .then(r => {
             this.produto = r;
-        })
+            })
+        },
+        fecharModal({target,currentTarget}){
+            if(target  === currentTarget ) this.produto = false;        
         }
     },
     created(){
