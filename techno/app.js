@@ -5,6 +5,7 @@ const vm = new Vue({
         produto:false,
         mensagemAlerta:"item adicionado",
         alertaAtivo:false,
+        carrinhoAtivo:false,
         carrinho: [],
     },
     filters:{
@@ -49,6 +50,9 @@ const vm = new Vue({
             })
         },
         fecharModal({target,currentTarget}){
+            if(target  === currentTarget ) this.produto = false;        
+        },
+        clickForaCarrinho({target,currentTarget}){
             if(target  === currentTarget ) this.produto = false;        
         },
         adicionarItem(){
